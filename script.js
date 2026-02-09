@@ -152,13 +152,13 @@ window.addEventListener("load", () => {
          camera.rotation.z = THREE.MathUtils.degToRad(-5);
 
          const slideTitles = [
-             "Project One",
-             "Project Two",
-             "Project Three",
-             "Project Four",
-             "Project Five",
-             "Project Six",
-             "Project Seven"
+             "Ninomae Ina'nis",
+             "Dreamscape",
+             "Frieren",
+             "Chainsaw",
+             "Red Reversal",
+             "Photoshop #1",
+             "Photoshop #2"
          ]
 
          function updateTexture(offset = 0) {    
@@ -216,11 +216,17 @@ window.addEventListener("load", () => {
                      ctx.restore();
 
                      ctx.fillStyle = "#FFFFFF";
+                     
+                     ctx.fillText(slideTitles[slideIndex], textureCanvas.width / 2, wrappedY + slideRect.height / 2);
+
+
                  } else {
                      ctx.fillStyle = "#333333";
                      ctx.fillRect(slideRect.x, slideRect.y, slideRect.width, slideRect.height);
                      
                      ctx.fillStyle = "#FFFFFF";
+                     ctx.fillText(slideTitles[slideIndex], textureCanvas.width / 2, wrappedY + slideRect.height / 2);
+
                  }
              }
              texture.needsUpdate = true;
