@@ -213,14 +213,14 @@ window.addEventListener("load", () => {
                     ctx.restore();
 
                     ctx.fillStyle = "#FFFFFF";
-                    ctx.fillText(slideTitles[slideIndex], textureCanvas.width / 2, wrappedY + slideRect.height / 2);
+                    // ctx.fillText(slideTitles[slideIndex], textureCanvas.width / 2, wrappedY + slideRect.height / 2);
 
                 } else {
                     ctx.fillStyle = "#333333";
                     ctx.fillRect(slideRect.x, slideRect.y, slideRect.width, slideRect.height);
                     
                     ctx.fillStyle = "#FFFFFF";
-                    ctx.fillText(slideTitles[slideIndex], textureCanvas.width / 2, wrappedY + slideRect.height / 2);
+                    // ctx.fillText(slideTitles[slideIndex], textureCanvas.width / 2, wrappedY + slideRect.height / 2);
                 }
             }
             texture.needsUpdate = true;
